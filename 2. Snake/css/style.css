@@ -1,0 +1,8 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#board{
+    border: 2px solid black;
+}
