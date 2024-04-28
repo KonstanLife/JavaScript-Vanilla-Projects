@@ -1,0 +1,26 @@
+body{
+
+    /* Box Model */
+
+  /*  display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /*
+
+
+    /* Text Property */
+
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+   
+
+}
+
+#board{
+
+   /* background-color: aqua; */
+ 
+   background-image: url(/images/flappybirdbg.png);
+
+}
