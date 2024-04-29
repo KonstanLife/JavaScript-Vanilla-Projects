@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+
+    --primary-color:#33333B ;
+    --second-color: #28292E ;
+    --third-color: #E48E13;
+
+}
+
+
+html,body{
+    margin: 0;
+}
+
+body{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: var(--second-color);
+    color: white;
+     font-family: "Roboto", sans-serif;
+    letter-spacing: 0.15em; /* espacio entre letras */
+}
+
+.heading{
+    font-size: 2em;
+}
+
+.description{
+    font-size: 1.5em;
+}
+
+#game_board{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /* Indico que por line se van a colocar 4 elementos */
+    gap: 1em;  /* distancia entre elementos*/
+    margin-top: 1em;
+}
+
+#new_game_button{
+    border: none;
+    border-radius: 1.5em;
+    padding: 0.5em 1.5em;
+    background-color: var(--third-color);
+    color: white;
+    font-size: 1em;
+    font-family:  inherit; /* scamos atributo de nodo padre */
+    letter-spacing: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#new_game_button:hover{
+
+    opacity: 0.8;
+}
+
+.card{
+    width: 5em;
+    height: 5em;
+    perspective: 50em;
+    cursor: pointer;
+}
+
+.card_inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card_front,
+.card_back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 0.5em;
+    font-size: 2.5em;
+    color: white;
+    box-shadow: 0.02em 0.02em 0.02em 0.02em rgba(0,0,0,0.1);
+}
+
+.card.visible .card_inner{
+    transform: rotateY(180deg);
+}
+
+.card_back{
+    transform: rotateY(180deg);
+}
