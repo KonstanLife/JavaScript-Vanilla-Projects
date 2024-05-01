@@ -1,0 +1,33 @@
+html{
+
+    --primary-color:#33333B ;
+    --second-color: #28292E ;
+    --third-color: #E48E13;
+
+}
+
+body{
+    margin: 0;
+    background-color: var(--second-color);
+}
+
+#container{
+    padding: 3rem;
+    text-align: center;
+}
+
+#container h1{
+
+    color: white;
+}
+
+#container canvas{
+
+    display: block;
+    margin: 0 auto;
+}
+
+canvas{
+ 
+    background-color: var(--primary-color);
+}
